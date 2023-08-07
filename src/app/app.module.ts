@@ -16,6 +16,13 @@ import { HomeComponent } from './home/home.component';
 import { CarteComponent } from './carte/carte.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ContactComponent } from './contact/contact.component';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { FiltrageTableComponent } from './filtrage-table/filtrage-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,9 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     CarteComponent,
     ReservationComponent,
-    ContactComponent
+    ContactComponent,
+    MainDashboardComponent,
+    FiltrageTableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,12 @@ import { ContactComponent } from './contact/contact.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule // importation de la card à partir de angular material
+    MatCardModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule // importation de la card à partir de angular material
   ],
   providers: [],
   bootstrap: [AppComponent]
