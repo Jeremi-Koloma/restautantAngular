@@ -8,21 +8,22 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface FiltrageTableItem {
   name: string;
   id: number;
+  price: number; 
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: FiltrageTableItem[] = [
-  {id: 1, name: 'Boeufs carottes'},
-  {id: 2, name: 'Brandade de morue'},
-  {id: 3, name: 'Faux-fillet'},
-  {id: 4, name: 'Spaghetti'},
-  {id: 5, name: 'Salade Lyonnaise'},
-  {id: 6, name: 'Saldade de riz'},
-  {id: 7, name: 'Attiéké Poisson'},
-  {id: 8, name: 'Pomme de tèrre sauté'},
-  {id: 9, name: 'Riz sagassaga'},
-  {id: 10, name: 'Salade au foie de volaille'},
-  {id: 11, name: 'Escalope de poulet'}
+  {id: 1, name: 'Boeufs carottes', price:3000},
+  {id: 2, name: 'Brandade de morue',price:2500},
+  {id: 3, name: 'Faux-fillet',price:7500},
+  {id: 4, name: 'Spaghetti',price:600},
+  {id: 5, name: 'Salade Lyonnaise',price:500},
+  {id: 6, name: 'Saldade de riz',price:100},
+  {id: 7, name: 'Attiéké Poisson',price:750},
+  {id: 8, name: 'Pomme de tèrre sauté',price:800},
+  {id: 9, name: 'Riz sagassaga',price:500},
+  {id: 10, name: 'Salade au foie de volaille',price:10000},
+  {id: 11, name: 'Escalope de poulet',price:15000}
 ];
 
 /**
@@ -90,6 +91,7 @@ export class FiltrageTableDataSource extends DataSource<FiltrageTableItem> {
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'price': return compare(a.price, b.price, isAsc);
         default: return 0;
       }
     });

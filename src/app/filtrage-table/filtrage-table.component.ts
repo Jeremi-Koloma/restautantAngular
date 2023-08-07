@@ -16,7 +16,7 @@ export class FiltrageTableComponent implements AfterViewInit {
   dataSource: FiltrageTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'price'];
 
   constructor() {
     this.dataSource = new FiltrageTableDataSource();
