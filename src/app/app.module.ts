@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { CarteComponent } from './carte/carte.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReservationComponent } from './reservation/reservation.component';
     MainNavComponent,
     HomeComponent,
     CarteComponent,
-    ReservationComponent
+    ReservationComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
